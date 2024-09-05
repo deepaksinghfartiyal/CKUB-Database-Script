@@ -1,0 +1,34 @@
+insert into [dbo].[Designs]
+(
+UserId,DealerId,ProductId,Quantities,[Category],  Customization,    Zip_path,    Image_path,
+Notes,
+Record_Created,
+Last_Modified,    
+Description,
+Thumbnails,
+Status,
+Sort) 
+values
+(
+-1232,    
+NULL,    
+'SBDUS21',    
+'{"sizes":{"xxxs":"0","xxs":"0","xs":"0","s":"0","m":"0","l":"0","xl":"0","xxl":"0","xxxl":"0"},"wSizes":{"xxxs":"0","xxs":"0","xs":"0","s":"0","m":"0","l":"0","xl":"0","xxl":"0","xxxl":"0"}}    ',    
+'CustomTraining',            
+NULL,    
+NULL,
+NULL,
+NULL,    
+'2018-09-04 02:05:56.463',    
+'2018-09-04 02:05:56.463',  
+'Sublimated Compression Top Template',    
+'SBDUS21-Front-UBCUT.jpg',
+'NEW',
+100)
+
+select*from designs order by 1 desc
+
+
+UPDATE [Designs]
+SET [DesignGUID] = NEWID(),Userid='-1',DealerId='-1'
+WHERE id =10528
